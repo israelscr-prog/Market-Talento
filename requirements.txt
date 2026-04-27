@@ -1,0 +1,7 @@
+python3.11
+pytest>=8
+pytest-mock>=3
+streamlit, 
+pandas
+flask
+flake8>=7
