@@ -29,3 +29,5 @@
 ──> `product_db.py` y los 11 productos    
 ──> `dn_filter.py`Funciones de Filtro    
 ──> `db_reader`Funcione Lectura
+- Movimiento de codigo heredado a carpeta `legacy/`
+- Creacion de **nuevo** `main.py`.
