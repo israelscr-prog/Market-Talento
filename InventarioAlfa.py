@@ -13,6 +13,8 @@ from flask import Flask, jsonify, render_template_string
 
 app = Flask(__name__)
 
+
+
 # ============================================================
 # BASE DE DATOS SIMULADA
 # ============================================================
@@ -256,7 +258,7 @@ HTML_TEMPLATE = '''
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Inventario Inteligente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -285,6 +287,9 @@ HTML_TEMPLATE = '''
                             <button class="btn btn-primary" onclick="location.href='/'">🏠 Inicio</button>
                             <button class="btn btn-success" onclick="analizarInventario()">🔍 Analizar Inventario</button>
                             <button class="btn btn-info" onclick="verProductos()">📦 Ver Productos</button>
+                            <a href="http://localhost:5002" target="_blank" class="btn btn-warning">
+                            🔗 Ir a Endpoints API
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
-python3.11
+Streamlit 1.35+
 pytest>=8
 pytest-mock>=3
-streamlit, 
+streamline
 pandas
 flask
 flake8>=7
