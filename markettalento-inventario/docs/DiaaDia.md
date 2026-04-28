@@ -31,5 +31,8 @@
 ──> `db_reader`Funcione Lectura
 - Movimiento de codigo heredado a carpeta `legacy/`
 - Creacion de **nuevo** `main.py`.
+
+## 29.04.26 Empiece a 00:15am, terminado a 
 - Añadido en Database   
 ──> 14 Productos para un total de 25
+- Añadido Docstrings Google en `db_reader` y  `dn_filter.py`
