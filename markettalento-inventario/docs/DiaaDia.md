@@ -28,7 +28,7 @@
 - Añadido en Database        
 ──> `product_db.py` y los 11 productos    
 ──> `dn_filter.py`Funciones de Filtro    
-──> `db_reader`Funcione Lectura
+──> `db_reader.py`Funcione Lectura
 - Movimiento de codigo heredado a carpeta `legacy/`
 - Creacion de **nuevo** `main.py`.
 
@@ -36,3 +36,6 @@
 - Añadido en Database   
 ──> 14 Productos para un total de 25
 - Añadido Docstrings Google en `db_reader` y  `dn_filter.py`
+- Creacion de archivos y funciones de Docstring Google:   
+──> `detector.py` --> Con funciones de  ` def detect_products() `   
+──> `scenario_loader.py` --> Con funcion de `def _load_scenarios()`

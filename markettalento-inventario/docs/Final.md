@@ -120,8 +120,8 @@ Market-Talento/
 `product_db.py`✅     
 `db_reader.py` ✅   
 `db_filter.py` ✅   
-`detector.py`   
-`scenario_loader.py`    
+`detector.py` ✅Hecho en fase 1   
+`scenario_loader.py` ✅ Hecho en fase1    
 `metrics.py`    
 `valuation.py`  
 `recommender.py`    
