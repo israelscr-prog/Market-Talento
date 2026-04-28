@@ -293,6 +293,36 @@ HTML_TEMPLATE = '''
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">🔌 Endpoints de la API</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-api" onclick="callAPI('/api/test')">
+                                <i class="fas fa-vial"></i> GET /api/test
+                            </button>
+                            <button class="btn btn-success btn-api" onclick="callAPI('/api/analizar-inventario')">
+                                <i class="fas fa-chart-line"></i> GET /api/analizar-inventario
+                            </button>
+                            <button class="btn btn-info btn-api" onclick="callAPI('/api/productos')">
+                                <i class="fas fa-boxes"></i> GET /api/productos
+                            </button>
+                            <button class="btn btn-warning btn-api" onclick="callAPI('/api/producto/Leche')">
+                                <i class="fas fa-box"></i> GET /api/producto/Leche
+                            </button>
+                            <button class="btn btn-secondary btn-api" onclick="callAPI('/api/recomendaciones')">
+                                <i class="fas fa-lightbulb"></i> GET /api/recomendaciones
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary" onclick="location.href='/'">
+                                <i class="fas fa-home"></i> Inicio
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-9">
                 <div class="card">
