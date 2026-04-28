@@ -22,6 +22,10 @@
 - Creacion de estructura modular objetivo con carpetas
 - Creación de todas las carpetas con sus `__init__.py`
 - Creacion de documentos:   
-──> Final.md --> Para documentar, corregir y seguir todas las 7 fases de problemas detectadas de Memoria de Refactorización     
-──> DiaaDia.md --> Para documentar todos los pasos a pasos hechos dia a dia.
-- 
+──> `Final.md` --> Para documentar, corregir y seguir todas las 7 fases de problemas detectadas de Memoria de Refactorización     
+──> `DiaaDia.md` --> Para documentar todos los pasos a pasos hechos dia a dia.
+- Añadido el `ci.yml` para trabajar con GitHub Actions
+- Añadido en Database        
+──> `product_db.py` y los 11 productos    
+──> `dn_filter.py`Funciones de Filtro    
+──> `db_reader`Funcione Lectura
