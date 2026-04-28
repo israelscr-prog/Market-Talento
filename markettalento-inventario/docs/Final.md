@@ -116,10 +116,23 @@ Market-Talento/
 - Creación de `requirements.txt`, `.gitignore`, `README.md`, `ci.yml`
 
 
-**Archivos creados en esta fase:**
-`product_db.py`, `db_reader.py`, `db_filter.py`, `detector.py`, `scenario_loader.py`,
-`metrics.py`, `valuation.py`, `recommender.py`, `demand_analyzer.py`, `stock_predictor.py`,
-`demoStreamlit.py`, todos los archivos de test, `ci.yml`, `arquitectura.md`, `Final.md`
+**Archivos creados en esta fase:**  
+`product_db.py`✅     
+`db_reader.py` ✅   
+`db_filter.py` ✅   
+`detector.py`   
+`scenario_loader.py`    
+`metrics.py`    
+`valuation.py`  
+`recommender.py`    
+`demand_analyzer.py`    
+`stock_predictor.py`    
+`demoStreamlit.py`  
+todos los archivos de test,     
+`ci.yml`✅  
+`arquitectura.md`   
+`DiaaDia.md`✅   
+`Final.md`✅
 
 ---
 

@@ -31,3 +31,5 @@
 ──> `db_reader`Funcione Lectura
 - Movimiento de codigo heredado a carpeta `legacy/`
 - Creacion de **nuevo** `main.py`.
+- Añadido en Database   
+──> 14 Productos para un total de 25
