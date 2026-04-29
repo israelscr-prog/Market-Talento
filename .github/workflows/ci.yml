@@ -28,11 +28,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r markettalento-inventario/requirements.txt
+          pip install -r requirements.txt
 
       - name: Lint — flake8
         run: |
-          pip install flake8
           flake8 markettalento-inventario/services/ \
             --max-line-length=100 \
             --exclude=__pycache__
