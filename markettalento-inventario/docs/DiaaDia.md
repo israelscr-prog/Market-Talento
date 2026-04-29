@@ -62,3 +62,6 @@
 ──> `test_db_reader.py`     
 ──> `test_product_db.py`    
 
+- Añadido tests de Vision:      
+──> `test_detector.py`     
+──> `test_scenario_loader.py`     

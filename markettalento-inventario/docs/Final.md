@@ -203,11 +203,11 @@ def calculate_inventory_metrics(detected_products, product_database):
 
 | Archivo | Tests |
 |---|---|
-| `test_product_db.py` | BD no vacía, campos requeridos presentes |
-| `test_db_reader.py` | Producto existente, producto inexistente, lista completa |
-| `test_db_filter.py` | Filtro por categoría, historial de ventas, producto desconocido |
-| `test_detector.py` | Retorna dict, contiene clave `productos` |
-| `test_scenario_loader.py` | Lista no vacía, estructura de cada escenario |
+|✅ `test_product_db.py` | BD no vacía, campos requeridos presentes |
+|✅ `test_db_reader.py` | Producto existente, producto inexistente, lista completa |
+|✅ `test_db_filter.py` | Filtro por categoría, historial de ventas, producto desconocido |
+|✅ `test_detector.py` | Retorna dict, contiene clave `productos` |
+|✅ `test_scenario_loader.py` | Lista no vacía, estructura de cada escenario |
 | `test_metrics.py` | Clasificación correcta, resumen con totales |
 | `test_valuation.py` | Valor es float positivo, producto desconocido ignorado |
 | `test_recommender.py` | Input vacío, prioridad ALTA cuando stock=0 |
