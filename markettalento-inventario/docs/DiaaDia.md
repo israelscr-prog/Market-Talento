@@ -42,8 +42,10 @@
 ──> `scenario_loader.py` --> Con funcion de `def _load_scenarios()`
 
 - Creacion de archivos y funciones con Docstring Google:   
-──> `metric.py` con funcion de `def count_by_status`    
-──> `valuation.py` con funcion de `def calculate_inventory_value`
+──> `metric.py`──> con funcion de `def count_by_status`    
+──> `valuation.py`──> con funcion de `def calculate_inventory_value`
 
-- Creacion de `recomender.py` y funcion de `def geneerate_recommendations`
-- 
+- Creacion de `recomender.py`──> con funcion de `def geneerate_recommendations`
+- Creacion de:  
+`demand_analyzer.py` ──> con funcion de `calculate_daily_demand`    
+`stock_preditor.py` ──> con funcion de `predict_stock_outage`
