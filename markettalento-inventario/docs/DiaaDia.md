@@ -77,3 +77,5 @@
 
 - Añadido tests de Integration:      
 ──> `test_full_pipeline.py`     
+
+- Arreglos de violaciones de PEP 8 style 

@@ -63,10 +63,14 @@ def predict_stock_outage(
 
     days = max(0, min(90, round(current_stock / adjusted, 1))) if adjusted > 0 else 999
 
-    if days <= 2:    estado = "CRITICO"
-    elif days <= 5:  estado = "BAJO"
-    elif days <= 10: estado = "MODERADO"
-    else:            estado = "ADECUADO"
+    if days <= 2:
+        estado = "CRITICO"
+    elif days <= 5:
+        estado = "BAJO"
+    elif days <= 10:
+        estado = "MODERADO"
+    else:
+        estado = "ADECUADO"
 
     return {
         "dias_hasta_agotarse":     days,
