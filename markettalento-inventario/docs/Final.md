@@ -121,10 +121,10 @@ Market-Talento/
 `db_reader.py` ✅   
 `db_filter.py` ✅   
 `detector.py` ✅Hecho en fase 1   
-`scenario_loader.py` ✅ Hecho en fase1    
-`metrics.py`    
-`valuation.py`  
-`recommender.py`    
+`scenario_loader.py` ✅ Hecho en fase 1    
+`metrics.py`✅ Hecho en fase 2    
+`valuation.py`✅ Hecho en fase 2  
+`recommender.py`✅ Hecho en fase 2    
 `demand_analyzer.py`    
 `stock_predictor.py`    
 `demoStreamlit.py`  

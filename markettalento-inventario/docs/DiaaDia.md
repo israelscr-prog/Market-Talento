@@ -44,3 +44,6 @@
 - Creacion de archivos y funciones con Docstring Google:   
 ──> `metric.py` con funcion de `def count_by_status`    
 ──> `valuation.py` con funcion de `def calculate_inventory_value`
+
+- Creacion de `recomender.py` y funcion de `def geneerate_recommendations`
+- 
