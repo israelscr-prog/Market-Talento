@@ -1,6 +1,6 @@
-Streamlit 1.35+
-pytest>=8
-pytest-mock>=3
-pandas
-flask
-flake8>=7
+streamlit>=1.35.0
+pytest>=8.0.0
+pytest-mock>=3.0.0
+pandas>=2.0.0
+flask>=3.0.0
+flake8>=7.0.0
