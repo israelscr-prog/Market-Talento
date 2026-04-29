@@ -20,6 +20,7 @@
 
 - Creacion de boton en HTLM paracambiar pagina de ` InventarionAlfa.py` a `EndPoint.py`
 - Creacion de estructura modular objetivo con carpetas
+
 - Creación de todas las carpetas con sus `__init__.py`
 - Creacion de documentos:   
 ──> `Final.md` --> Para documentar, corregir y seguir todas las 7 fases de problemas detectadas de Memoria de Refactorización     
@@ -36,6 +37,10 @@
 - Añadido en Database   
 ──> 14 Productos para un total de 25
 - Añadido Docstrings Google en `db_reader` y  `dn_filter.py`
-- Creacion de archivos y funciones de Docstring Google:   
+- Creacion de archivos y funciones con Docstring Google:   
 ──> `detector.py` --> Con funciones de  ` def detect_products() `   
 ──> `scenario_loader.py` --> Con funcion de `def _load_scenarios()`
+
+- Creacion de archivos y funciones con Docstring Google:   
+──> `metric.py` con funcion de `def count_by_status`    
+──> `valuation.py` con funcion de `def calculate_inventory_value`
