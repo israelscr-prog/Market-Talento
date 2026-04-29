@@ -1,8 +1,10 @@
 ﻿"""db_filter.py — Responsabilidad: filtrado y consultas derivadas."""
+from typing import Optional
 from .product_db import product_database
 from .db_reader import get_product_info
 
-def get_by_category(category: str) -> list[dict]:
+
+def get_by_category(category: str) -> list:
     """Devuelve todos los productos que pertenecen a una categoría dada.
 
     Args:
@@ -19,7 +21,9 @@ def get_by_category(category: str) -> list[dict]:
         []
     """
     return [p for p in product_database.values() if p["categoria"] == category]
-def get_sales_history(product_name: str, days: int = 20) -> list[int]:
+
+
+def get_sales_history(product_name: str, days: int = 20) -> list:
     """Devuelve el historial de ventas de un producto para los últimos N días.
 
     Args:

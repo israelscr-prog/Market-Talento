@@ -1,10 +1,12 @@
+"""stock_predictor.py — Predice dias hasta el agotamiento de stock."""
+from typing import Optional
 from .demand_analyzer import calculate_daily_demand
 
 
 def predict_stock_outage(
-    sales_history: list[int],
+    sales_history: list,
     current_stock: int,
-    product_info: dict | None = None,
+    product_info: Optional[dict] = None,
 ) -> dict:
     """Predice cuántos días quedan hasta que se agote el stock de un producto.
 
@@ -22,7 +24,6 @@ def predict_stock_outage(
     Returns:
         Dict con las claves:
             - dias_hasta_agotarse (float): Días estimados hasta agotamiento.
-              0 si el stock ya está agotado.
             - estado (str): "AGOTADO", "SIN HISTORIAL", "CRITICO",
               "BAJO", "MODERADO" o "ADECUADO".
             - cantidad_recomendada (int): Unidades sugeridas para reponer.
@@ -42,10 +43,10 @@ def predict_stock_outage(
     """
     if current_stock <= 0:
         return {
-            "dias_hasta_agotarse":      0,
-            "estado":                   "AGOTADO",
-            "cantidad_recomendada":     10,
-            "consumo_promedio_diario":  0.0,
+            "dias_hasta_agotarse":     0,
+            "estado":                  "AGOTADO",
+            "cantidad_recomendada":    10,
+            "consumo_promedio_diario": 0.0,
         }
 
     try:
@@ -54,10 +55,10 @@ def predict_stock_outage(
         avg      = demand["avg_daily"]
     except ValueError:
         return {
-            "dias_hasta_agotarse":      0,
-            "estado":                   "SIN HISTORIAL",
-            "cantidad_recomendada":     10,
-            "consumo_promedio_diario":  0.0,
+            "dias_hasta_agotarse":     0,
+            "estado":                  "SIN HISTORIAL",
+            "cantidad_recomendada":    10,
+            "consumo_promedio_diario": 0.0,
         }
 
     days = max(0, min(90, round(current_stock / adjusted, 1))) if adjusted > 0 else 999

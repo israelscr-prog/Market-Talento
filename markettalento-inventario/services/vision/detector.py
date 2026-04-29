@@ -1,8 +1,10 @@
+"""detector.py — Orquesta la deteccion de productos en una imagen."""
+from typing import Optional
 import random
 from .scenario_loader import _load_scenarios
 
 
-def detect_products(image_path: str | None = None) -> dict:
+def detect_products(image_path: Optional[str] = None) -> dict:
     """Orquesta la detección de productos en una imagen.
 
     Selecciona un escenario de detección simulada delegando
@@ -16,7 +18,7 @@ def detect_products(image_path: str | None = None) -> dict:
     Returns:
         Dict con las claves:
             - descripcion (str): Descripción del escenario detectado.
-            - productos (list[dict]): Productos detectados con
+            - productos (list): Productos detectados con
               claves nombre, cantidad y confianza.
 
     Example:
