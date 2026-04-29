@@ -16,7 +16,8 @@
 ├── README.md
 └── requirements.txt
 
-## 28.04.26 Empiece a 10:15 am terminado a las 13:55
+## Fase 1 / 28.04.26 Empiece a 10:15 am terminado a las 13:55
+### Creacion de esqueleto carpetas y archivos principales
 
 - Creacion de boton en HTLM paracambiar pagina de ` InventarionAlfa.py` a `EndPoint.py`
 - Creacion de estructura modular objetivo con carpetas
@@ -33,7 +34,8 @@
 - Movimiento de codigo heredado a carpeta `legacy/`
 - Creacion de **nuevo** `main.py`.
 
-## 29.04.26 Empiece a 00:15am, terminado a 
+## Fase 2 / 29.04.26 Empiece a 00:15am, terminado a  23:59
+### Archivos con funciones y productos
 - Añadido en Database   
 ──> 14 Productos para un total de 25
 - Añadido Docstrings Google en `db_reader` y  `dn_filter.py`
@@ -51,3 +53,12 @@
 `stock_preditor.py` ──> con funcion de `predict_stock_outage`
 
 - Arreglo de ci.yml
+
+## Fase 3 / 30.04.26 Empiece a 00:00
+### Creacion de Tests
+
+- Añadido tests de Database:   
+──> `test_db_filter.py`     
+──> `test_db_reader.py`     
+──> `test_product_db.py`    
+
