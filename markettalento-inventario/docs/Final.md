@@ -208,9 +208,9 @@ def calculate_inventory_metrics(detected_products, product_database):
 |✅ `test_db_filter.py` | Filtro por categoría, historial de ventas, producto desconocido |
 |✅ `test_detector.py` | Retorna dict, contiene clave `productos` |
 |✅ `test_scenario_loader.py` | Lista no vacía, estructura de cada escenario |
-| `test_metrics.py` | Clasificación correcta, resumen con totales |
-| `test_valuation.py` | Valor es float positivo, producto desconocido ignorado |
-| `test_recommender.py` | Input vacío, prioridad ALTA cuando stock=0 |
+|✅ `test_metrics.py` | Clasificación correcta, resumen con totales |
+|✅ `test_valuation.py` | Valor es float positivo, producto desconocido ignorado |
+|✅ `test_recommender.py` | Input vacío, prioridad ALTA cuando stock=0 |
 | `test_stock_predictor.py` | Estado AGOTADO cuando stock=0, días > 0 con historial |
 | `test_demand_analyzer.py` | Historial vacío, cálculo correcto |
 | `test_full_pipeline.py` | Pipeline completo de detección → predicción |

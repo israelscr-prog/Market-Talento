@@ -65,3 +65,8 @@
 - Añadido tests de Vision:      
 ──> `test_detector.py`     
 ──> `test_scenario_loader.py`     
+
+- Añadido tests de Inventory:      
+──> `test_metrics.py`     
+──> `test_recommender.py`     
+──> `test_valuation.py`     
