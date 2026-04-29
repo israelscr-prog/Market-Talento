@@ -213,11 +213,11 @@ def calculate_inventory_metrics(detected_products, product_database):
 |✅ `test_recommender.py` | Input vacío, prioridad ALTA cuando stock=0 |
 |✅ `test_stock_predictor.py` | Estado AGOTADO cuando stock=0, días > 0 con historial |
 |✅ `test_demand_analyzer.py` | Historial vacío, cálculo correcto |
-| `test_full_pipeline.py` | Pipeline completo de detección → predicción |
+|✅ `test_full_pipeline.py` | Pipeline completo de detección → predicción |
 
 **CI/CD:** GitHub Actions con matriz Python 3.9 / 3.10 / 3.11 / 3.12
 
-**Estado:** Esqueletos creados, implementación pendiente
+**Estado:** Esqueletos creados, implementación ✅ Completada
 
 ---
 

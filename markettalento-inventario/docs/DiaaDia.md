@@ -55,7 +55,7 @@
 - Arreglo de ci.yml
 
 ## Fase 3 / 30.04.26 Empiece a 00:00
-### Creacion de Tests
+### Creacion de Tests generados por iA 
 
 - Añadido tests de Database:   
 ──> `test_db_filter.py`     
@@ -74,3 +74,6 @@
 - Añadido tests de Prediction:      
 ──> `test_demand_analyzer.py`     
 ──> `test_stock_predictor.py`     
+
+- Añadido tests de Integration:      
+──> `test_full_pipeline.py`     
