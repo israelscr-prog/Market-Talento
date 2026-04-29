@@ -49,3 +49,5 @@
 - Creacion de:  
 `demand_analyzer.py` ──> con funcion de `calculate_daily_demand`    
 `stock_preditor.py` ──> con funcion de `predict_stock_outage`
+
+- Arreglo de ci.yml
