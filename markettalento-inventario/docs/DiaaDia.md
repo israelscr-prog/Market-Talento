@@ -70,3 +70,7 @@
 ──> `test_metrics.py`     
 ──> `test_recommender.py`     
 ──> `test_valuation.py`     
+
+- Añadido tests de Prediction:      
+──> `test_demand_analyzer.py`     
+──> `test_stock_predictor.py`     

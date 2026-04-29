@@ -1,43 +1,60 @@
-def calculate_daily_demand(sales_history: list[int]) -> dict:
-    """Calcula la demanda media diaria y la ajustada por tendencia reciente.
+"""demand_analyzer.py — Analiza el historial de ventas y calcula la demanda diaria."""
 
-    Analiza el historial de ventas para obtener la demanda promedio
-    global y una demanda ajustada basada en los últimos 5 días.
-    Solo realiza análisis estadístico, sin clasificar ni recomendar.
+
+def calculate_daily_demand(sales_history: list) -> dict:
+    """Calcula la demanda diaria promedio, ajustada y tendencia a partir
+    del historial de ventas.
+
+    Usa una media ponderada lineal (más peso a valores recientes) para
+    calcular adjusted_daily, lo que da más relevancia a los picos recientes
+    que a la media pura.
 
     Args:
         sales_history: Lista de enteros con las ventas diarias históricas.
-            Debe contener al menos un elemento.
+            No puede ser vacía ni None.
 
     Returns:
         Dict con las claves:
-            - avg_daily (float): Media diaria global redondeada a 2 decimales.
-            - adjusted_daily (float): Media ajustada por tendencia reciente,
-              redondeada a 2 decimales.
+            - avg_daily (float): Media aritmética del historial.
+            - adjusted_daily (float): Media ponderada lineal (énfasis reciente).
+            - trend (str): "CRECIENTE", "DECRECIENTE" o "ESTABLE".
 
     Raises:
         ValueError: Si sales_history está vacío.
+        TypeError: Si sales_history es None.
 
     Example:
-        >>> calculate_daily_demand([4, 4, 4, 4, 4])
-        {"avg_daily": 4.0, "adjusted_daily": 4.0}
-        >>> calculate_daily_demand([1, 2, 3, 4, 8, 8, 8, 8, 8])
-        {"avg_daily": 5.0, "adjusted_daily": 8.0}
+        >>> calculate_daily_demand([3, 4, 5, 3, 4, 6, 5])
+        {"avg_daily": 4.29, "adjusted_daily": 4.61, "trend": "ESTABLE"}
         >>> calculate_daily_demand([])
-        ValueError: sales_history no puede estar vacío.
+        ValueError
     """
-    if not sales_history:
+    if sales_history is None:
+        raise TypeError("sales_history no puede ser None.")
+
+    if len(sales_history) == 0:
         raise ValueError("sales_history no puede estar vacío.")
 
-    avg = sum(sales_history) / len(sales_history)
+    n = len(sales_history)
 
-    if len(sales_history) >= 5:
-        recent   = sum(sales_history[-5:]) / 5
-        adjusted = avg * (recent / avg if avg > 0 else 1.0)
+    # Media aritmética
+    avg = sum(sales_history) / n
+
+    # Media ponderada lineal: peso 1 al más antiguo, n al más reciente
+    weights     = range(1, n + 1)
+    weighted    = sum(v * w for v, w in zip(sales_history, weights))
+    adjusted    = weighted / sum(weights)
+
+    # Tendencia: compara demanda ajustada contra media pura
+    if adjusted > avg * 1.1:
+        trend = "CRECIENTE"
+    elif adjusted < avg * 0.9:
+        trend = "DECRECIENTE"
     else:
-        adjusted = avg
+        trend = "ESTABLE"
 
     return {
-        "avg_daily":      round(avg, 2),
+        "avg_daily":      round(avg,      2),
         "adjusted_daily": round(adjusted, 2),
+        "trend":          trend,
     }
