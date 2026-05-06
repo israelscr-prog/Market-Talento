@@ -1,5 +1,6 @@
 ﻿"""db_reader.py — Responsabilidad: lectura basica de product_database."""
 from typing import Optional
+
 from .product_db import product_database
 
 

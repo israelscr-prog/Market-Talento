@@ -1,5 +1,4 @@
 ﻿"""db_filter.py — Responsabilidad: filtrado y consultas derivadas."""
-from typing import Optional
 from .product_db import product_database
 from .db_reader import get_product_info
 
@@ -44,5 +43,6 @@ def get_sales_history(product_name: str, days: int = 20) -> list:
     product = get_product_info(product_name)
     if not product:
         return []
-    h = product["historial_ventas"]
-    return h[-days:] if days > 0 else h
+
+    history = product["historial_ventas"]
+    return history[-days:] if days > 0 else history

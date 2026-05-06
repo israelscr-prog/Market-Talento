@@ -41,9 +41,9 @@ def calculate_daily_demand(sales_history: list) -> dict:
     avg = sum(sales_history) / n
 
     # Media ponderada lineal: peso 1 al más antiguo, n al más reciente
-    weights     = range(1, n + 1)
-    weighted    = sum(v * w for v, w in zip(sales_history, weights))
-    adjusted    = weighted / sum(weights)
+    weights = range(1, n + 1)
+    weighted = sum(v * w for v, w in zip(sales_history, weights))
+    adjusted = weighted / sum(weights)
 
     # Tendencia: compara demanda ajustada contra media pura
     if adjusted > avg * 1.1:
@@ -54,7 +54,7 @@ def calculate_daily_demand(sales_history: list) -> dict:
         trend = "ESTABLE"
 
     return {
-        "avg_daily":      round(avg,      2),
+        "avg_daily": round(avg, 2),
         "adjusted_daily": round(adjusted, 2),
-        "trend":          trend,
+        "trend": trend,
     }

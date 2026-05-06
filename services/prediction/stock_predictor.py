@@ -1,5 +1,6 @@
 """stock_predictor.py — Predice dias hasta el agotamiento de stock."""
 from typing import Optional
+
 from .demand_analyzer import calculate_daily_demand
 
 
@@ -43,21 +44,21 @@ def predict_stock_outage(
     """
     if current_stock <= 0:
         return {
-            "dias_hasta_agotarse":     0,
-            "estado":                  "AGOTADO",
-            "cantidad_recomendada":    10,
+            "dias_hasta_agotarse": 0,
+            "estado": "AGOTADO",
+            "cantidad_recomendada": 10,
             "consumo_promedio_diario": 0.0,
         }
 
     try:
-        demand   = calculate_daily_demand(sales_history)
+        demand = calculate_daily_demand(sales_history)
         adjusted = demand["adjusted_daily"]
-        avg      = demand["avg_daily"]
+        avg = demand["avg_daily"]
     except ValueError:
         return {
-            "dias_hasta_agotarse":     0,
-            "estado":                  "SIN HISTORIAL",
-            "cantidad_recomendada":    10,
+            "dias_hasta_agotarse": 0,
+            "estado": "SIN HISTORIAL",
+            "cantidad_recomendada": 10,
             "consumo_promedio_diario": 0.0,
         }
 
@@ -73,8 +74,8 @@ def predict_stock_outage(
         estado = "ADECUADO"
 
     return {
-        "dias_hasta_agotarse":     days,
-        "estado":                  estado,
-        "cantidad_recomendada":    round(avg * 10),
+        "dias_hasta_agotarse": days,
+        "estado": estado,
+        "cantidad_recomendada": round(avg * 10),
         "consumo_promedio_diario": adjusted,
     }

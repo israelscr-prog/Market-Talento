@@ -24,7 +24,7 @@ def count_by_status(detected_products: list[dict]) -> dict:
 
     Example:
         >>> productos = [{"nombre": "Leche", "cantidad": 8},
-        ...              {"nombre": "Pan",   "cantidad": 1}]
+        ... {"nombre": "Pan", "cantidad": 1}]
         >>> result = count_by_status(productos)
         >>> result["resumen"]["productos_bajos"]
         1
@@ -35,13 +35,15 @@ def count_by_status(detected_products: list[dict]) -> dict:
         info = product_database.get(item["nombre"])
         if not info:
             continue
-        stock  = item["cantidad"]
+
+        stock = item["cantidad"]
         minimo = info.get("stock_minimo", 5)
-        entry  = {
-            "producto":     item["nombre"],
+        entry = {
+            "producto": item["nombre"],
             "stock_actual": stock,
             "stock_minimo": minimo,
         }
+
         if stock == 0:
             critical.append({**entry, "estado": "AGOTADO"})
         elif stock < minimo:
@@ -50,14 +52,14 @@ def count_by_status(detected_products: list[dict]) -> dict:
             adequate.append({**entry, "estado": "ADECUADO"})
 
     return {
-        "criticos":  critical,
-        "bajos":     low,
+        "criticos": critical,
+        "bajos": low,
         "adecuados": adequate,
         "resumen": {
-            "total_productos":    len(detected_products),
-            "total_unidades":     sum(p["cantidad"] for p in detected_products),
+            "total_productos": len(detected_products),
+            "total_unidades": sum(p["cantidad"] for p in detected_products),
             "productos_criticos": len(critical),
-            "productos_bajos":    len(low),
-            "productos_adecuados":len(adequate),
+            "productos_bajos": len(low),
+            "productos_adecuados": len(adequate),
         },
     }
