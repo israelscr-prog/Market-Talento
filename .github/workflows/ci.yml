@@ -1,4 +1,4 @@
-name: CI — Market Talento Inventario
+name: CI - Market Talento Inventario
 
 on:
   push:
@@ -30,12 +30,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint — flake8
+      - name: Lint - flake8
         run: |
-          flake8 markettalento-inventario/services/ \
+          flake8 services/ \
             --max-line-length=100 \
             --exclude=__pycache__
 
-      - name: Test — pytest
+      - name: Test - pytest
         run: |
-          pytest markettalento-inventario/tests/ -v
+          pytest tests/ -v
